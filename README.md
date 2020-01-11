@@ -78,3 +78,7 @@ Follow the instructions to implment `resting`, `picking up items` and `equipping
 /
 /
 (my link is git@github.com:Jitgitbit/bb-herogame-starter-master.git)
+
+Bad result indeed. I wasn't able to do the user interface part. In the Chrome DevTool, the errors I get back indicate that the content doesn't get loaded.
+
+OK ! Found the solution for the content loading, finally, 20 minutes left

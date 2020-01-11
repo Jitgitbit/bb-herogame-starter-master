@@ -15,11 +15,11 @@
   </div>
   <div class="actions" styles="display: inline-block">
     <h1>REST</h1>
-      <img class="pics" id="inn" src="images/rest.jpeg" alt="fluorite">
+      <img onclick="rest(person); return false;" class="pics" id="inn" src="images/rest.jpeg" alt="fluorite">
     <h1>PICK UP</h1>
-     <img  class="pics" id="bag" src="images/pickup.jpeg" alt="clearQuartz">
+     <img onclick="pickUpItem(person, weapon); return false;" class="pics" id="bag" src="images/pickup.jpeg" alt="clearQuartz">
     <h1>EQUIP</h1>
-     <img class="pics" id="dagger" src="images/equip.jpeg" alt="crystalBall">
+     <img onclick="equipWeapon(person); return false;" class="pics" id="dagger" src="images/equip.jpeg" alt="crystalBall">
   </div>
 <!--<script>
     document.addEventListener("DOMContentLoaded", () => {

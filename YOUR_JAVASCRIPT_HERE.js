@@ -23,18 +23,15 @@ function rest(person){
   return person;
 };
 
-const weapon = {
-  type: "sword",
-  damage: 5,
-};
+const weapon = hero.weapon;
 
-function pickUpItem(person, weapon){
-  person.inventory.push(weapon);
-  return person.inventory;
+function equipWeapon(person, weapon){
+  let array = person.inventory;
+  array.push(weapon);
 };
 //console.log(pickUpItem(person,weapon));
 
-function equipWeapon(person){
+function pickUpItem(person){
   if(person.inventory !== []){
     person.weapon = person.inventory[0];
   };
@@ -42,14 +39,20 @@ function equipWeapon(person){
 //console.log(equipWeapon(person));
 
 let sleep = document.getElementById('inn');
-sleep.onclick = rest;
+//sleep.onclick = rest;
 
 let pickIt = document.getElementById('bag');
-pickIt.onclick = pickUpItem;
+//pickIt.onclick = pickUpItem;
 
 let equipIt = document.getElementById('dagger');
-equipIt.onclick = equipWeapon;
+//equipIt.onclick = equipWeapon;
 
+/*
+function handler() {
+  alert( "..." );
+  return false;
+}
+*/
 
 console.log('contentTestjeEinde');
 
