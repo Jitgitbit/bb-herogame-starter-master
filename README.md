@@ -71,3 +71,10 @@ Follow the instructions to implment `resting`, `picking up items` and `equipping
 - Implement fighting an enemy. (how you do it is up to you!)
 
 - When an enemy or weapon gets clicked it gets deleted from the page
+
+/
+/
+/
+/
+/
+(my link is git@github.com:Jitgitbit/bb-herogame-starter-master.git)
