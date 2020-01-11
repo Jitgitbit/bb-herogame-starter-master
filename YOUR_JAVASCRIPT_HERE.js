@@ -25,15 +25,18 @@ function rest(person){
 
 const weapon = hero.weapon;
 
-function equipWeapon(person, weapon){
+function pickUpItem(person, weapon){
   let array = person.inventory;
   array.push(weapon);
+  person.weapon = person.inventory[0];
 };
 //console.log(pickUpItem(person,weapon));
 
-function pickUpItem(person){
+function equipWeapon(person){
   if(person.inventory !== []){
-    person.weapon = person.inventory[0];
+    
+    let array = person.inventory;
+    array.push(weapon);
   };
 };
 //console.log(equipWeapon(person));
