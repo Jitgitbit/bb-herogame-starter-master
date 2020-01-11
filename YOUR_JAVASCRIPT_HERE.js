@@ -41,13 +41,8 @@ function equipWeapon(person){
 };
 //console.log(equipWeapon(person));
 
-
-let sleep = document.getElementById('inn');
+let sleep = document.querySelector('inn');
 sleep.onclick = rest;
-/*if(sleep.clicked == true){
-  rest(person);
-}*/
-//sleep.addEventListener('click', rest);
 
 let pickIt = document.getElementById('bag');
 pickIt.onclick = pickUpItem;
@@ -55,6 +50,25 @@ pickIt.onclick = pickUpItem;
 let equipIt = document.getElementById('dagger');
 equipIt.onclick = equipWeapon;
 
+/*
+let sleep = document.querySelector('inn');
+sleep.onclick = rest;
+/*if(sleep.clicked == true){
+  rest(person);
+}*/
+//sleep.addEventListener('click', rest);
+
+/*
+window.onload = function(){
+  let sleep = document.querySelector('inn');
+  sleep.onclick = rest;
+
+  let pickIt = document.getElementById('bag');
+  pickIt.onclick = pickUpItem;
+
+  let equipIt = document.getElementById('dagger');
+  equipIt.onclick = equipWeapon;
+};
 
 
 console.log('contentTestjeEinde');
