@@ -22,6 +22,10 @@ function rest(person){
   };
   return person;
 };
+let sleep = document.getElementById('rest');
+sleep.onclick = rest();
+
+
 
 const weapon = {
   type: "sword",
