@@ -23,7 +23,10 @@ function rest(person){
   return person;
 };
 
-const weapon = hero.weapon;
+const weapon = {
+  type:"dagger",
+  damage: 2,
+};
 
 function pickUpItem(person, weapon){
   let array = person.inventory;
@@ -34,7 +37,7 @@ function pickUpItem(person, weapon){
 
 function equipWeapon(person){
   if(person.inventory !== []){
-    
+    person.weapon = person.inventory[0]
     let array = person.inventory;
     array.push(weapon);
   };
