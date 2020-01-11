@@ -5,7 +5,7 @@ const hero = {
   inventory: [],
   health: 10,
   weapon: {
-    type: "Black Mirror",
+    type: "dagger",
     damage: 2,
   },
 };
@@ -22,7 +22,24 @@ function rest(person){
   return person;
 };
 
-function pickUpItem(){};
+
+const dagger = hero.weapon
+console.log(dagger);
+
+function pickUpItem(dagger){
+  let startInventory = hero.inventory;
+  console.log(firstInventory);
+
+  let newInventory = startInventory.push(dagger);
+  console.log(newInventory);
+  return newInventory;
+};
+
 function equipWeapon(){};
 
-//Creates an alert popup with a message, If the health property of person already has the value 10
+//Adds the weapon object as the last element of the inventory array of person
+
+//let newLength = fruits.push('Orange')
+// ["Apple", "Banana", "Orange"]
+
+//array.push(objectName)
