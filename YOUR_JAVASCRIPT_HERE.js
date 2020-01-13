@@ -24,23 +24,25 @@ function rest(person){
 };
 
 const weapon = {
-  type:"dagger",
+  type: "dagger",
   damage: 2,
 };
 
 function pickUpItem(person, weapon){
+  person.weapon = person.inventory[0];
   let array = person.inventory;
   array.push(weapon);
-  person.weapon = person.inventory[0];
+  return person.inventory;
 };
 //console.log(pickUpItem(person,weapon));
 
 function equipWeapon(person){
   if(person.inventory !== []){
-    person.weapon = person.inventory[0]
+    person.weapon = person.inventory[0];
     let array = person.inventory;
     array.push(weapon);
   };
+  return person.weapon;
 };
 //console.log(equipWeapon(person));
 
@@ -52,6 +54,19 @@ let pickIt = document.getElementById('bag');
 
 let equipIt = document.getElementById('dagger');
 //equipIt.onclick = equipWeapon;
+
+/*
+document.getElementById('link-with-image').addEventListener('click', function(event){
+    event.preventDefault();
+    console.log('link clicked, target is ', event.target);
+});
+*/
+
+/*
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOMContentLoaded', document.getElementById('header-id'))
+});
+*/
 
 /*
 function handler() {
