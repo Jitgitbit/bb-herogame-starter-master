@@ -13,11 +13,6 @@ const hero = {
 //pause
 const person = hero;
 
-const weapon = {
-  type: "dagger",
-  damage: 2,
-};
-
 function rest(person){
   if(person.health !== 10){
     person.health = 10;
@@ -28,50 +23,36 @@ function rest(person){
   return person;
 };
 
-//pause
+const weapon = {
+  type: "dagger",
+  damage: 2,
+};
 
 function pickUpItem(person, weapon){
-  person.inventory.push(weapon);
-  return person;
+  person.weapon = person.inventory[0];
+  let array = person.inventory;
+  array.push(weapon);
+  return person.inventory;
 };
 //console.log(pickUpItem(person,weapon));
 
-//pause
-function equipWeapon(person) {
-  const inventoryCount = person.inventory.length;
-  const weapon = person.inventory[0];
-  if (inventoryCount >= 1) {
-    person.weapon = weapon;
-    return person;
-  }
-  return person;
+function equipWeapon(person){
+  if(person.inventory !== []){
+    person.weapon = person.inventory[0];
+    let array = person.inventory;
+    array.push(weapon);
+  };
+  return person.weapon;
 };
 //console.log(equipWeapon(person));
 
-//pause
-
-document.getElementById("inn").addEventListener("click", function() {
-  rest(hero);
-});
-
-// When the dagger is clicked it will add a weapon object to the inventory array with `type`: `dagger` and `damage`: 2
-document.getElementById("dagger").addEventListener("click", function() {
-  pickUpItem(hero, weapon);
-});
-
-document.getElementById("bag").addEventListener("click", function() {
-  equipWeapon(hero);
-});
-
-console.log('contentTestjeEinde');
-
-//let sleep = document.getElementById('inn');
+let sleep = document.getElementById('inn');
 //sleep.onclick = rest;
 
-//let pickIt = document.getElementById('bag');
+let pickIt = document.getElementById('bag');
 //pickIt.onclick = pickUpItem;
 
-//let equipIt = document.getElementById('dagger');
+let equipIt = document.getElementById('dagger');
 //equipIt.onclick = equipWeapon;
 
 /*
@@ -94,6 +75,7 @@ function handler() {
 }
 */
 
+console.log('contentTestjeEinde');
 
 //sleep.addEventListener('click', rest);
 
